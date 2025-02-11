@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Request Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">How Web Works</h1>
+    <div class="toggle-container">
+        <label class="toggle">
+            Use HTTP
+            <input type="checkbox" onchange="toggleHttp()">
+        </label>
+    </div>
+    <div class="container">
+        <div id="rejected" class="rejected" style="display: none;">No certificate found, request rejected</div>
+        <button onclick="startAnimation()">
+            Search
+            <div class="icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt="CSS">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS">
+            </div>
+        </button>
+        <div class="circle"></div>
+        <button disabled>Checks DNS Records</button>
+        <div class="circle"></div>
+        <button disabled>Sends HTTP req</button>
+        <div class="circle"></div>
+        <button disabled>SSL/TLS</button>
+        <div class="circle"></div>
+        <button disabled>Firewall</button>
+        <div class="circle"></div>
+        <button disabled>Load Balancer</button>
+        <div class="circle"></div>
+        <button disabled>Server</button>
+        <div class="circle"></div>
+    </div>
+    <div class="explanation">
+        <h1 id="explanation"></h1>
+    </div>
+</body>
+</html>
